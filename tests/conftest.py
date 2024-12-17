@@ -5,7 +5,6 @@ from dataclasses import dataclass
 FAKE_MAIL = "test@localhost.com"
 FAKE_PASS = "pass"
 
-
 @dataclass
 class FakeConn(Connector):
     sended = False

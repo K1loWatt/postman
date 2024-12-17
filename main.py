@@ -30,7 +30,7 @@ def run(msg: int, subject: str, destination: str):
         config.get("pass"),
         config.get("host"),
         config.get("port"),
-        config.get("TLS"),
+        config.get("tls"),
     )
     manager = Manager(conn)
     mail = Mail(msg, subject)

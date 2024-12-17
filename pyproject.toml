@@ -2,7 +2,7 @@
 name = "postman"
 version = "0.1.0"
 description = ""
-authors = ["JaviMunir <moubayyed47@Gmail.com>"]
+authors = ["JaviMunir <moubayyed47@hotmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

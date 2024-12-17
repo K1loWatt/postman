@@ -7,10 +7,10 @@ from postman.mail import Mail
 class Manager:
     connector: Connector
 
-    def send(self, mail: Mail, destination: str):
+    def send(self, mail: Mail, destination: str) ->:
+
         if not self.connector.is_connected:
             self.connector.connect()
-
         result = self.connector.send(mail, destination)
 
         self.connector.disconnect()

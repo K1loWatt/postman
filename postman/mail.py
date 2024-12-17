@@ -1,18 +1,18 @@
 from dataclasses import dataclass
 
 
-class Template:
-    pass
-
-
 @dataclass
 class Mail:
+    """
+    Baseclass to represent an email with a subject and body.
+    """
+    
     body: str
     subject: str
 
     @property
-    def msg(self):
+    def content(self)-> str:
         return f"Subject: {self.subject}\n\n{self.body}"
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Subject: {self.subject}"

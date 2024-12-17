@@ -4,7 +4,7 @@ from postman.mail import Mail
 
 
 def test_connector():
-    conn = Gmail(FAKE_MAIL, FAKE_PASS, "localhost", 1025, TLS=False)
+    conn = Gmail(FAKE_MAIL, FAKE_PASS, "localhost", 1025, tls=False)
     conn.connect()
     assert conn.is_connected == True
 
