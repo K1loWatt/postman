@@ -1,12 +1,13 @@
- Project Title
+### Postman
 
-A brief description of what your project does and its purpose.
+Proyect to create a mail sender, and make super easy the mail sending
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+It will include:
+- HTML templates
+- Support for different mail providers (Gmail, outlook, etc)
+- Totally configurable
 
 ## Installation
 
@@ -18,17 +19,19 @@ A brief description of what your project does and its purpose.
    ```bash
    cd your_project
    ```
+4. Create a virtual env and activate it
+
 3. Install any necessary dependencies (if applicable):
    ```bash
-   pip install -r requirements.txt
+      poetry install
    ```
 
 ## Usage
 
-Provide examples of how to use your project. Here’s a simple command to run your script:
+Example of sending a simple mesage
 
 ```bash
-python my_script.py
+python main.py <target_mail> <subject> <message>
 ```
 
 ## Contributing
