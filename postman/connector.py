@@ -14,13 +14,13 @@ class Connector:
     is_connected: bool = False
     tls: bool = True
 
-    def connect(self)-> None:
+    def connect(self) -> None:
         raise NotImplementedError("Method not implemented")
 
-    def send(self, mail: Mail, destination: str)-> None:
+    def send(self, mail: Mail, destination: str) -> None:
         raise NotImplementedError("Method not implemented")
 
-    def disconnect(self)-> None:
+    def disconnect(self) -> None:
         raise NotImplementedError("Method not implemented")
 
 
@@ -30,7 +30,7 @@ class Gmail(Connector):
     port: int = field(default=587)
     tls: bool = field(default=True)
 
-    def connect(self)-> None:
+    def connect(self) -> None:
         self.server = smtplib.SMTP(self.smtp_server_uri, self.port)
         if self.tls:
             self.server.starttls()
