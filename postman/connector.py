@@ -10,7 +10,7 @@ class Connector:
     password: str
     smtp_server_uri: str
     port: int
-    server: smtplib.SMTP = None
+    server: smtplib.SMTP | None = None
     is_connected: bool = False
     tls: bool = True
 
@@ -39,6 +39,7 @@ class Gmail(Connector):
 
     def send(self, mail: Mail, destination: str) -> None:
         byte_string = mail.content.encode("utf-8")
+        assert self.server, "Not connected to server"
         self.server.sendmail(self.sender_email, destination, byte_string)
 
     def disconnect(self) -> None:

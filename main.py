@@ -23,7 +23,7 @@ def load_config():
     return config
 
 
-def run(msg: int, subject: str, destination: str):
+def run(msg: str, subject: str, destination: str):
     config = load_config()
     conn = Gmail(
         config.get("username"),
